@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<link rel="stylesheet" href="style.css">  
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Tac+One&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Salário do Colaborador</title>
+</head>
+<body>
+    <br>
+        <br>
+        <br>
+    <br>
+    <h1 style="font-size: 55px;">Vamos Calcular o seu Salário Anual?</h1>
+    <br>
+    <br>
+    <br>
+   
+    <div id="output">
+    <div>
+        <label style="font-size: 35px;" class="exo-2-" for="horasNormais">Digite o número de horas normais trabalhadas no ano:</label>
+        <input style="font-size: 25px;" type="number" id="horasNormais">
+    </div>
+    <div>
+        <label style="font-size: 35px;" class="exo-2-" for="horasExtras">Digite o número de horas extras trabalhadas no ano:</label>
+        <input style="font-size: 25px;" type="number" id="horasExtras">
+    </div>
+        <button onclick="calcularSalario()">Calcular</button>
+    </div>
+
+<script>
+const valorHoraNormal = 10.00;
+const valorHoraExtra = 15.00;
+
+function calcularSalario() {
+    var horasNormais = parseFloat(document.getElementById("horasNormais").value);
+    var horasExtras = parseFloat(document.getElementById("horasExtras").value);
+
+    var horasNormaisResultado = horasNormais * valorHoraNormal;
+    var horasExtrasResultado = horasExtras * valorHoraExtra;
+    var salarioTotal = horasNormaisResultado + horasExtrasResultado;
+    var poupanca = salarioTotal * 0.08;
+
+    var outputDiv = document.getElementById("output");
+    outputDiv.innerHTML = "";
+
+    outputDiv.innerHTML += "<hr>";
+    outputDiv.innerHTML += "Valor horas normais: R$" + horasNormaisResultado.toFixed(2) + "<br><br>";
+    outputDiv.innerHTML += "Valor horas extras: R$" + horasExtrasResultado.toFixed(2) + "<br><br>";
+    outputDiv.innerHTML += "Total anual: R$" + salarioTotal.toFixed(2) + "<br><br>";
+    outputDiv.innerHTML += "Valor a poupar: R$" + poupanca.toFixed(2) + "<br><br>";
+    outputDiv.innerHTML += "<hr>";
+}
+</script>
+
+</body>
+</html>
