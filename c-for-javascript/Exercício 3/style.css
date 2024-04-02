@@ -1,0 +1,24 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 30px;
+    background-color: rgb(121, 199, 57);
+    height: 200vh;
+    width: auto;
+}
+label {
+    margin-top: 55px;
+    display: block;
+    margin-bottom: 10px;
+}
+input {
+   
+    border-radius: 999px;
+}
+button {
+    margin-top: 12px;
+}
+
+
